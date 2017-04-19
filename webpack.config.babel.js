@@ -53,6 +53,7 @@ let config = {
                 loaders: ['style', 'css']
             }
         ],
+        /*
         preLoaders: [
             {
                 test: /\.js$/,
@@ -60,6 +61,7 @@ let config = {
                 loaders: ['eslint']
             }
         ]
+        */
     },
     plugins: [
         //allow external dependencies from Bower

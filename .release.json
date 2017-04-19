@@ -13,7 +13,7 @@
     "changelogCommand": "git log --pretty=format:'* %s (%h)' [REV_RANGE]",
     "requireCleanWorkingDir": false,
     "src": {
-        "pushRepo": "https://github.com/benmarch/angular-ui-tour.git",
+        "pushRepo": "https://github.com/Domtain/angular-ui-tour.git",
         "beforeStartCommand": false,
         "beforeStageCommand": false,
         "afterReleaseCommand": false

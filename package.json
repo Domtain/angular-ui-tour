@@ -5,11 +5,11 @@
   "author": {
     "name": "",
     "email": "",
-    "url": "https://github.com/benmarch"
+    "url": "https://github.com/Domtain/angular-ui-tour"
   },
-  "homepage": "https://github.com/benmarch/angular-ui-tour",
+  "homepage": "https://github.com/Domtain/angular-ui-tour",
   "bugs": {
-    "url": "https://github.com/benmarch/angular-ui-tour/issues"
+    "url": "https://github.com/Domtain/angular-ui-tour/issues"
   },
   "licenses": [
     {
@@ -21,7 +21,7 @@
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "git://github.com/benmarch/angular-ui-tour.git"
+    "url": "git://github.com/Domtain/angular-ui-tour.git"
   },
   "main": "dist/angular-ui-tour.js",
   "scripts": {

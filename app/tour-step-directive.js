@@ -7,7 +7,6 @@ export default function tourStepDirective(TourHelpers, uiTourService, $sce) {
 
     return {
         restrict: 'EA',
-        scope: true,
         require: '?^uiTour',
         link: function (scope, element, attrs, uiTourCtrl) {
             var ctrl,
