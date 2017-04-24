@@ -18,7 +18,11 @@ function run(TourConfig, uiTourService, $rootScope, $injector) {
     }
 
     if (TourConfig.areNavigationInterceptorsEnabled()) {
-        $rootScope.$on('$locationChangeStart', checkAndKillToursOnNavigate);
+        $rootScope.$on('$locationChangeStart', function() {
+            if(TourConfig.get('useUiRouter') === false) {
+                checkAndKillToursOnNavigate();
+            }
+        });
         $rootScope.$on('$stateChangeStart', checkAndKillToursOnNavigate);
 
         //for UIRouter 1.0, not sure if it works

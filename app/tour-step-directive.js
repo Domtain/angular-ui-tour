@@ -10,7 +10,7 @@ export default function tourStepDirective(TourHelpers, uiTourService, $sce) {
         require: '?^uiTour',
         link: function (scope, element, attrs, uiTourCtrl) {
             var ctrl,
-            //Assign required options
+                //Assign required options
                 step,
                 events = 'onShow onShown onHide onHidden onNext onPrev onBackdropClick'.split(' '),
                 options = 'content title animation placement backdrop backdropBorderRadius orphan popupDelay popupCloseDelay popupClass fixed preventScrolling scrollIntoView nextStep prevStep nextPath prevPath scrollOffset scrollParentId'.split(' '),
@@ -77,10 +77,12 @@ export default function tourStepDirective(TourHelpers, uiTourService, $sce) {
             //set up redirects (deprecated)
             if (step.nextPath) {
                 step.redirectNext = true;
+                ctrl.waitFor(step.nextStep);
                 TourHelpers.setRedirect(step, ctrl, 'onNext', step.nextPath, step.nextStep);
             }
             if (step.prevPath) {
                 step.redirectPrev = true;
+                ctrl.waitFor(step.prevStep);
                 TourHelpers.setRedirect(step, ctrl, 'onPrev', step.prevPath, step.prevStep);
             }
 
