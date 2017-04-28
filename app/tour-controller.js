@@ -198,14 +198,25 @@ export default function uiTourController($timeout, $q, $filter, $document, TourC
      * @param {object} step
      */
     self.addStep = function (step) {
-        if (~stepList.indexOf(step)) {
+        function contains(arr, obj) {
+            var i = arr.length;
+            while (i--) {
+                if (arr[i].stepId === obj.stepId) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        if(contains(stepList, step)) {
             return;
         }
+
         stepList.push(step);
         stepList = $filter('orderBy')(stepList, 'order');
         self.emit('stepAdded', step);
-        if (resumeWhenFound) {
-            resumeWhenFound(step);
+        if (_resumeWhenFound) {
+            _resumeWhenFound(step);
         }
     };
 
